@@ -1,24 +1,17 @@
-package cloud.autotests.config.demowebshop;
+package cloud.autotests.config;
 
 import org.aeonbits.owner.Config;
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
         "system:properties",
-        "classpath:config/demowebshop/app.properties"
+        "classpath:config/app.properties"
 })
 public interface AppConfig extends Config {
-
-    @Key("webUrl")
     String webUrl();
-
-    @Key("apiUrl")
     String apiUrl();
-
-    @Key("userLogin")
     String userLogin();
-
-    @Key("userPassword")
     String userPassword();
+    String userToken();
 
 }

@@ -1,4 +1,12 @@
 
+# Tests for Allure TestOps
+<a target="_blank" href="https://qameta.io">qameta.io</a>
+
+# Jenkins job
+<a target="_blank" href="https://jenkins.autotests.cloud/job/allure-testops-tests/">jenkins.autotests.cloud/job/allure-testops-tests</a>
+
+
+
 # USAGE examples
 
 ### For run remote tests need fill remote.properties or to pass value:
@@ -19,7 +27,7 @@ gradle clean test
 
 Run tests with not filled remote.properties:
 ```bash
-gradle clean -DremoteDriverUrl=https://user1:1234@selenoid.autotests.cloud/wd/hub/ -DvideoStorage=https://selenoid.autotests.cloud/video/ -Dthreads=1 test
+gradle clean -DremoteDriverUrl=https://%s:%s@selenoid.autotests.cloud/wd/hub/ -DvideoStorage=https://selenoid.autotests.cloud/video/ -Dthreads=1 test
 ```
 
 Serve report:
